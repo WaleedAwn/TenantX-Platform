@@ -12,7 +12,6 @@ public sealed class SubscriptionsDbContext(DbContextOptions<SubscriptionsDbConte
     : DbContext(options), ISubscriptionsDbContext
 {
   public DbSet<Subscription> Subscriptions { get; set; }
-
   public DbSet<Plan> Plans { get; set; }
   public DbSet<Subscriber> Subscribers { get; set; }
   protected override void OnModelCreating(ModelBuilder modelBuilder)

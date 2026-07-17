@@ -4,7 +4,7 @@ using TenantX.Common.Application.Clock;
 using TenantX.Common.Domain.Constants;
 using TenantX.Common.Domain.Results;
 using TenantX.Subscriptions.Application.Abstractions.Data;
-using TenantX.Subscriptions.Application.Common.Services;
+using TenantX.Subscriptions.Application.Abstractions.Services;
 using TenantX.Subscriptions.Application.Features.Subscriptions.Dtos;
 using TenantX.Subscriptions.Application.Features.Subscriptions.Mappers;
 using TenantX.Subscriptions.Domain.Plans;
