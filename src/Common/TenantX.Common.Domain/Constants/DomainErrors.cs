@@ -56,4 +56,10 @@ public static class DomainErrors
         public const string FeatureIdRequired = "Entitlement.FeatureIdRequired";
         public const string InvalidValue = "Entitlement.InvalidValue";
     }
+    public static class Subscriber
+    {
+        public const string NotFound = "Subscriber.NotFound";
+        public const string AlreadyExists = "Subscriber.AlreadyExists";
+        public const string ExternalIdRequired = "Subscriber.ExternalIdRequired";
+    }
 }
