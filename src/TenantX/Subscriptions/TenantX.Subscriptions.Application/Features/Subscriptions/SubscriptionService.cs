@@ -11,7 +11,7 @@ using TenantX.Subscriptions.Application.Abstractions.Data;
 using TenantX.Subscriptions.Domain.Plans;
 using TenantX.Subscriptions.Domain.Subscriptions;
 
-namespace TenantX.Subscriptions.Application.Common.Services;
+namespace TenantX.Subscriptions.Application.Features.Subscriptions;
 
 public sealed class SubscriptionService : ISubscriptionService
 {

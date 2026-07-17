@@ -11,4 +11,10 @@ public static class ValidationConstants
   {
     public const int MaxLength = 500;
   }
+  public static class Subscriptions
+  {
+    public const int PaymentCodeLength = 6;
+    public const int DefaultPaymentCodeExpiryMinutes = 60;
+    public const int DefaultGracePeriodInDays = 3;
+  }
 }

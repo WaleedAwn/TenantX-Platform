@@ -57,7 +57,7 @@ public static class DomainErrors
         public const string ValueRequired = "Entitlement.ValueRequired";
         public const string FeatureIdRequired = "Entitlement.FeatureIdRequired";
         public const string InvalidValue = "Entitlement.InvalidValue";
-        
+
     }
     public static class Subscriber
     {
@@ -74,5 +74,7 @@ public static class DomainErrors
         public const string PaymentCodeInvalid = "Subscription.PaymentCodeInvalid";
         public const string PeriodInvalid = "Subscription.PeriodInvalid";
         public const string AlreadyActive = "Subscription.AlreadyActive";
+        public const string InvalidExpiry = "Subscription.InvalidExpiry";
+
     }
 }

@@ -1,7 +1,7 @@
 using TenantX.Common.Domain.Results;
 using TenantX.Subscriptions.Domain.Subscriptions;
 
-namespace TenantX.Subscriptions.Application.Common.Services;
+namespace TenantX.Subscriptions.Application.Features.Subscriptions;
 
 public interface ISubscriptionService
 {
