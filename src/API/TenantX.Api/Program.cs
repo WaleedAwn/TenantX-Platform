@@ -20,9 +20,9 @@ builder.Services.AddOpenApi();
 // modules configuration
 
 // Reuse common infrastructure for web API, authentication, etc.
-builder.Services.AddCoreWebApiInfrastructure(builder.Configuration, "Tenants", "Subscriptions");
+builder.Services.AddCoreWebApiInfrastructure(builder.Configuration, "Tenants");
 
-builder.Configuration.AddModuleConfiguration(["Tenants", "Subscriptions"]);
+builder.Configuration.AddModuleConfiguration(["Tenants"]);
 
 builder.Services.AddTenantsModule(builder.Configuration);
 builder.Services.AddSubscriptionsModule(builder.Configuration);

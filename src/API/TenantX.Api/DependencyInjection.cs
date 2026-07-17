@@ -231,10 +231,10 @@ public static class DependencyInjection
 		app.UseRateLimiter();
 
 		// 7. Authentication (must come before authorization)
-		app.UseAuthentication();
+		// app.UseAuthentication();
 
 		// 8. Authorization (must come after authentication)
-		app.UseAuthorization();
+		// app.UseAuthorization();
 
 		// 9. Output caching (after auth to cache based on user context)
 		app.UseOutputCache();
