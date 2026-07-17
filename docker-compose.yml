@@ -36,19 +36,19 @@ services:
       - tenantx-network
 
   # Centralized Logging (Seq) - Access via http://localhost:8081
-  tenantx.seq:
-    image: datalust/seq:latest
-    container_name: tenantx.seq
-    restart: always
-    environment:
-      ACCEPT_EULA: Y
-    ports:
-      - "5341:5341"  # Ingestion port
-      - "8081:80"    # UI port
-    volumes:
-      - ./.containers/tenantx_seq:/data
-    networks:
-      - tenantx-network
+  # tenantx.seq:
+  #   image: datalust/seq:latest
+  #   container_name: tenantx.seq
+  #   restart: always
+  #   environment:
+  #     ACCEPT_EULA: Y
+  #   ports:
+  #     - "5341:5341"  # Ingestion port
+  #     - "8081:80"    # UI port
+  #   volumes:
+  #     - ./.containers/tenantx_seq:/data
+  #   networks:
+  #     - tenantx-network
 
 networks:
   tenantx-network:
