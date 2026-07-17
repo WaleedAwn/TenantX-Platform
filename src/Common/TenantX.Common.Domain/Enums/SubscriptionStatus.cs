@@ -2,9 +2,18 @@ namespace TenantX.Common.Domain.Enums;
 
 public enum SubscriptionStatus
 {
-    Pending = 1,    // Waiting for payment
-    Active = 2,     // Access granted
-    Canceled = 3,   // Marked to stop at end of period
-    Expired = 4,    // Time ran out
-    Deactivated = 5 // Force closed (e.g., during an upgrade)
+    /// <summary>Waiting for payment code confirmation from wallet/gateway.</summary>
+    Pending = 1,
+    
+    /// <summary>Payment confirmed, access granted.</summary>
+    Active = 2,
+    
+    /// <summary>User stopped renewal; access remains until EndDate + GracePeriod.</summary>
+    Canceled = 3,
+    
+    /// <summary>Access revoked because the period and grace period have ended.</summary>
+    Expired = 4,
+    
+    /// <summary>Forcefully closed (e.g., during a mid-month upgrade to a new plan).</summary>
+    Deactivated = 5
 }

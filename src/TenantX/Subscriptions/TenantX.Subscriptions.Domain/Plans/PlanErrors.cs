@@ -5,18 +5,20 @@ namespace TenantX.Subscriptions.Domain.Plans;
 
 public static class PlanErrors
 {
-  public static readonly Error NotFound =
-      Error.NotFound(DomainErrors.Plan.PlanNotFound, "The requested plan was not found.");
+    public static readonly Error NotFound =
+        Error.NotFound(DomainErrors.Plan.PlanNotFound, "The requested plan was not found.");
 
-  public static readonly Error Archived =
-      Error.Conflict(DomainErrors.Plan.Archived, "This plan is archived and cannot be modified.");
+    public static readonly Error Archived =
+        Error.Conflict(DomainErrors.Plan.Archived, "This plan is archived and cannot be modified.");
 
-  public static readonly Error TenantMismatch =
-      Error.Forbidden(DomainErrors.Plan.TenantMismatch, "The feature belongs to a different tenant.");
+    public static readonly Error TenantMismatch =
+        Error.Forbidden(DomainErrors.Plan.TenantMismatch, "The feature belongs to a different tenant.");
 
-  public static readonly Error InvalidNumericValue =
-      Error.Validation(DomainErrors.Entitlement.InvalidValue, "The feature requires a numeric value.");
+    public static readonly Error InvalidNumericValue =
+        Error.Validation(DomainErrors.Entitlement.InvalidValue, "The feature requires a numeric value.");
 
-  public static readonly Error InvalidBooleanValue =
-      Error.Validation(DomainErrors.Entitlement.InvalidValue, "The feature requires a boolean value ('true' or 'false').");
+    public static readonly Error InvalidBooleanValue =
+        Error.Validation(DomainErrors.Entitlement.InvalidValue, "The feature requires a boolean value ('true' or 'false').");
+    public static readonly Error InvalidBillingPeriod =
+     Error.Unexpected(DomainErrors.Plan.InvalidBillingPeriod, "The billing period assigned to this plan is not supported for date calculation.");
 }

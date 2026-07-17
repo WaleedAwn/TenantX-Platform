@@ -11,6 +11,7 @@ using TenantX.Common.Domain.Shared.ValueObjects;
 using TenantX.Subscriptions.Domain.Features;
 using TenantX.Subscriptions.Domain.Plans.Entitlements;
 using TenantX.Subscriptions.Domain.Plans.Events;
+using TenantX.Subscriptions.Domain.Subscriptions.ValueObjects;
 
 namespace TenantX.Subscriptions.Domain.Plans;
 
@@ -162,5 +163,30 @@ public sealed class Plan : TenantScopedAggregateRoot<PlanId>
         }
 
         return Result.Success;
+    }
+
+    /// <summary>
+    /// Calculates the subscription period based on the Plan's billing cycle without throwing exceptions.
+    /// </summary>
+    /// <param name="startDate">The date the subscription activation begins.</param>
+    /// <param name="tenantGracePeriod">The extra days allowed by the tenant settings.</param>
+    /// <returns>A Result containing the SubscriptionPeriod or a calculation error.</returns>
+    public Result<SubscriptionPeriod> CalculatePeriod(DateTime startDate, int tenantGracePeriod)
+    {
+        DateTime? endDate = BillingPeriod switch
+        {
+            BillingPeriod.Monthly => startDate.AddMonths(1),
+            BillingPeriod.Yearly => startDate.AddYears(1),
+            BillingPeriod.Lifetime => startDate.AddYears(100),
+            _ => null // Catch-all for unsupported or undefined enum values
+        };
+
+        if (endDate is null)
+        {
+            return PlanErrors.InvalidBillingPeriod;
+        }
+
+        // Pass the result of the calculation to the SubscriptionPeriod VO for final validation
+        return SubscriptionPeriod.Create(startDate, endDate.Value, tenantGracePeriod);
     }
 }

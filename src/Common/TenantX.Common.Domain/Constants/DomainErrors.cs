@@ -49,17 +49,30 @@ public static class DomainErrors
         public const string Archived = "Plan.Archived";
         public const string DuplicateFeature = "Plan.DuplicateFeature";
         public const string TenantMismatch = "Plan.TenantMismatch";
+        public const string InvalidBillingPeriod = "Plan.InvalidBillingPeriod";
+
     }
     public static class Entitlement
     {
         public const string ValueRequired = "Entitlement.ValueRequired";
         public const string FeatureIdRequired = "Entitlement.FeatureIdRequired";
         public const string InvalidValue = "Entitlement.InvalidValue";
+        
     }
     public static class Subscriber
     {
         public const string NotFound = "Subscriber.NotFound";
         public const string AlreadyExists = "Subscriber.AlreadyExists";
         public const string ExternalIdRequired = "Subscriber.ExternalIdRequired";
+    }
+
+    public static class Subscriptions
+    {
+        public const string NotFound = "Subscription.NotFound";
+        public const string InvalidStatusTransition = "Subscription.InvalidStatusTransition";
+        public const string PaymentCodeExpired = "Subscription.PaymentCodeExpired";
+        public const string PaymentCodeInvalid = "Subscription.PaymentCodeInvalid";
+        public const string PeriodInvalid = "Subscription.PeriodInvalid";
+        public const string AlreadyActive = "Subscription.AlreadyActive";
     }
 }
