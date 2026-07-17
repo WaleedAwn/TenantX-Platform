@@ -1,9 +1,3 @@
-This is the finalized, comprehensive **Technical Source of Truth** for the **Generic Subscription & Entitlement Engine (GSEE)**. 
-
-This document is designed for developers, architects, and contributors. It explicitly defines the **Tenant** model (the systems using GSEE) and ensures absolute data isolation and architectural integrity for a SaaS environment.
-
----
-
 # Generic Subscription & Entitlement Engine (GSEE)
 
 **Status:** Final Architectural Specification  
