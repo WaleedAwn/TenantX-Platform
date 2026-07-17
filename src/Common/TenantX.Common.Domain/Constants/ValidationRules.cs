@@ -29,9 +29,3 @@ internal sealed class StringMaxLengthRule(string? value, int maxLength, string f
     public string Code => DomainErrors.Common.TooLong;
 }
 
-internal sealed class TransactionContextUserCannotBeNullRule(UserId? userId) : IBusinessRule
-{
-    public bool IsBroken() => userId is null;
-    public string Message => "Transaction context user cannot be null";
-    public string Code => DomainErrors.Context.UserRequired;
-}
