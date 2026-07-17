@@ -82,7 +82,7 @@ public sealed class Feature : TenantScopedAggregateRoot<FeatureId>
   {
     if (IsArchived)
     {
-      return Error.Conflict(DomainErrors.Feature.Inactive, "Cannot update an archived feature.");
+      return FeatureErrors.Inactive;
     }
 
     DisplayName = newName;

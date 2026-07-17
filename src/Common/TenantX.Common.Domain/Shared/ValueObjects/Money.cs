@@ -22,7 +22,7 @@ public record Money : ValueObject
     public static Result<Money> Create(decimal amount, string currencyCode)
     {
         if (amount < 0)
-            return Error.Validation(DomainErrors.Subscriptions.InvalidAmount, "Amount cannot be negative");
+            return Error.Validation(DomainErrors.Common.InvalidAmount, "Amount cannot be negative");
 
         var currencyResult = Currency.FromCode(currencyCode);
         if (currencyResult.IsError)

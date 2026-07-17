@@ -17,6 +17,8 @@ public static class DomainErrors
         public const string TooLong = "string.ValueTooLong";
         public const string TooShort = "string.ValueTooShort";
         public const string NullValue = "string.NullValue";
+        public const string InvalidAmount = "Money.InvalidAmount";
+
     }
 
     public static class Email
@@ -41,12 +43,17 @@ public static class DomainErrors
         public const string Inactive = "Feature.Inactive";
 
     }
-    public static class Subscriptions
+    public static class Plan
     {
-        public const string InvalidAmount = "Money.InvalidAmount";
         public const string PlanNotFound = "Plan.NotFound";
-        public const string FeatureNotFound = "Feature.NotFound";
+        public const string Archived = "Plan.Archived";
         public const string DuplicateFeature = "Plan.DuplicateFeature";
-        public const string ActiveSubscriptionExists = "Subscription.ActiveExists";
+        public const string TenantMismatch = "Plan.TenantMismatch";
+    }
+    public static class Entitlement
+    {
+        public const string ValueRequired = "Entitlement.ValueRequired";
+        public const string FeatureIdRequired = "Entitlement.FeatureIdRequired";
+        public const string InvalidValue = "Entitlement.InvalidValue";
     }
 }
