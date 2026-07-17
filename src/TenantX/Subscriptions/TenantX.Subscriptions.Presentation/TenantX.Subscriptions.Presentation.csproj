@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\TenantX.Common.Api\TenantX.Common.Api.csproj" />
+    <ProjectReference Include="..\TenantX.Subscriptions.Application\TenantX.Subscriptions.Application.csproj" />
+  </ItemGroup>
+
+</Project>

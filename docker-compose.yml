@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  baqalati.database:
+    image: postgres:16-alpine  # Use a specific version for stability
+    container_name: baqalati.database
+    environment:
+      POSTGRES_DB: baqalati
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./.containers/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d baqalati"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    
+  baqalati.seq:
+    image: datalust/seq:latest
+    container_name: baqalati.seq
+    environment:
+      ACCEPT_EULA: Y
+    ports:
+      - "5341:5341"
+      - "8081:80"
+    volumes:
+      - ./.containers/seq:/data  

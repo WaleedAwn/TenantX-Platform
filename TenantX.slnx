@@ -1,0 +1,35 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/API/">
+    <Project Path="src/API/TenantX.Api/TenantX.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Common/">
+    <Project Path="src/Common/TenantX.Common.Api/TenantX.Common.Api.csproj" />
+    <Project Path="src/Common/TenantX.Common.Application/TenantX.Common.Application.csproj" />
+    <Project Path="src/Common/TenantX.Common.Domain/TenantX.Common.Domain.csproj" />
+    <Project Path="src/Common/TenantX.Common.Infrastructure/TenantX.Common.Infrastructure.csproj" />
+    <Project Path="src/Common/TenantX.Common.UnitTests/TenantX.Common.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/src/TenantX/" />
+  <Folder Name="/src/TenantX/Subscriptions/">
+    <Project Path="src/TenantX/Subscriptions/TenantX.Subscriptions.Application/TenantX.Subscriptions.Application.csproj" />
+    <Project Path="src/TenantX/Subscriptions/TenantX.Subscriptions.Domain/TenantX.Subscriptions.Domain.csproj" />
+    <Project Path="src/TenantX/Subscriptions/TenantX.Subscriptions.Infrastructure/TenantX.Subscriptions.Infrastructure.csproj" />
+    <Project Path="src/TenantX/Subscriptions/TenantX.Subscriptions.IntegrationTests/TenantX.Subscriptions.IntegrationTests.csproj" />
+    <Project Path="src/TenantX/Subscriptions/TenantX.Subscriptions.Presentation/TenantX.Subscriptions.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/TenantX/Tenants/">
+    <Project Path="src/TenantX/Tenants/TenantX.Tenants.Domain/TenantX.Tenants.Domain.csproj" />
+    <Project Path="src/TenantX/Tenants/TenantX.Tenants.Features/TenantX.Tenants.Features.csproj" />
+    <Project Path="src/TenantX/Tenants/TenantX.Tenants.Infrastructure/TenantX.Tenants.Infrastructure.csproj" />
+    <Project Path="src/TenantX/Tenants/TenantX.Tenants.IntegrationTests/TenantX.Tenants.IntegrationTests.csproj" />
+  </Folder>
+</Solution>

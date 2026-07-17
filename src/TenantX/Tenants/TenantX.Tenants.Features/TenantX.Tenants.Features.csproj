@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../Common/TenantX.Common.Api/TenantX.Common.Api.csproj" />
+    <ProjectReference Include="../../../Common/TenantX.Common.Application/TenantX.Common.Application.csproj" />
+    <ProjectReference Include="../TenantX.Tenants.Domain/TenantX.Tenants.Domain.csproj" />
+  </ItemGroup>
+
+ <ItemGroup>
+	<InternalsVisibleTo Include="TenantX.Tenants.IntegrationTests" />
+  </ItemGroup>
+
+</Project>

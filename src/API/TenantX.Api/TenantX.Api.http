@@ -1,0 +1,6 @@
+@Baqalati_Api_HostAddress  = http://localhost:5137
+
+GET {{Baqalati_Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
